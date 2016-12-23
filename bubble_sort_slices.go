@@ -129,9 +129,7 @@ func (i64Slice Int64Slice) Sort() {
 }
 
 //A function that checks type of slice and calls their related Sort() to sort it. It returns error as nil (on success) otherwise a valid error type
-func BubbleSort(listOfNums interface{}) error {
-	var err error
-
+func BubbleSort(listOfNums interface{}) {
 	switch t := listOfNums.(type) {
 	case []int:
 		IntSlice(listOfNums.([]int)).Sort()
@@ -148,10 +146,10 @@ func BubbleSort(listOfNums interface{}) error {
 	case []float64:
 		Float64Slice(listOfNums.([]float64)).Sort()
 	default:
-		err = errors.New("Got an unwanted slice to sort ")
+		err := errors.New("Got an unwanted slice to sort ")
 		color.Blue("[hygull/ds] Got  => %v", t)
 		color.Blue("[hygull/ds] Type => %T", t)
 		color.Red("[hygull/ds] You have to pass any one among these => []int, []int8,[]int16,[]int32,[]int64,[]float32,[]float64")
+		panic(err)
 	}
-	return err
 }

@@ -48,7 +48,7 @@ func TestBubbleSort(t *testing.T) {
 	}
 }
 
-/*--------- Uncommenting the above commented line generates the following on execution of test command ------
+/*-------- Uncommenting the above commented line at line no. 21 & 33 generates the followingmessage on execution of test command ----
 
 Before sorting : [12 -3 34 0 56]
 After sorting  : [-3 0 12 34 56]
