@@ -39,17 +39,15 @@ func TestBubbleSort(t *testing.T) {
 	for i := 0; i < numOfFields; i++ {
 
 		color.Green("Before sorting : %v", e.Field(i).Interface()) //In case of success, this message will not be displayed
-		err := BubbleSort(e.Field(i).Interface())
-		if err != nil {
-			t.Errorf("This is not fine...") //In case of success, this message will not be displayed
-		} else {
-			color.Blue("After sorting  : %v", e.Field(i).Interface()) //In case of success, this message will not be displayed
-		}
+
+		BubbleSort(e.Field(i).Interface())
+
+		color.Blue("After sorting  : %v", e.Field(i).Interface()) //In case of success, this message will not be displayed
+
 	}
 }
 
-/*-------- Uncommenting the above commented line at line no. 21 & 33 generates the followingmessage on execution of test command ----
-
+/*
 Before sorting : [12 -3 34 0 56]
 After sorting  : [-3 0 12 34 56]
 Before sorting : [111 12 67 98 -15]
@@ -64,23 +62,9 @@ Before sorting : [12.07 -34.87 87.234 123.99 32]
 After sorting  : [-34.87 12.07 32 87.234 123.99]
 Before sorting : [1 3.3 6 7 9.5]
 After sorting  : [1 3.3 6 7 9.5]
-Before sorting : [hygull rob robert ken]
-[hygull/ds] Got  => [hygull rob robert ken]
-[hygull/ds] Type => []string
-[hygull/ds] You have to pass any one among these => []int, []int8,[]int16,[]int32,[]int64,[]float32,[]float64
 Before sorting : []
 After sorting  : []
 Before sorting : []
 After sorting  : []
---- FAIL: TestBubbleSort (0.00s)
-	bubble_sort_test.go:43: This is not fine...
-FAIL
-FAIL	ds	0.007s
 
-------------------------------------------------------------------------------------------------------------*/
-
-/*------------------------------------- On Success -----------------------------------------------------------
-
-ok  	ds	0.007s
-
-------------------------------------------------------------------------------------------------------------*/
+*/
