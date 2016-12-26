@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-//import "github.com/hygull/ds"
-import "ds"
+import "github.com/hygull/ds"
 
 func main() {
 	intSlice := []int{34, 89, 21, 11, 98, 43, 24, 1, -43, 67, -2, -23}
