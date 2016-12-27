@@ -2,7 +2,7 @@
 	{
 		"date_of_creation" => "23 Dec 2016, Friday",
 		"aim_of_program"   => "To sort a slice of integers & floats using ds package",
-		"coded_by"         => "Rishikesh Agrawani",
+		"coded_by"         => "hygull",
 		"Go_version"	   => "1.7.1",
 	}
 */

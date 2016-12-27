@@ -1,8 +1,8 @@
 /*
 	{
 		"date_of_creation" => "26 Dec 2016, Monday",
-		"aim_of_program"   => "o create a node for singly linked list with variable number of information",
-		"coded_by"         => "Rishikesh Agrawani",
+		"aim_of_program"   => "To create a node for singly linked list with variable number of information",
+		"coded_by"         => "hygull",
 		"Go_version"	   => "1.7.1",
 	}
 */

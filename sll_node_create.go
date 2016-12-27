@@ -80,16 +80,19 @@ func CreateNode(compulsoryData interface{}, data ...interface{}) *Node {
 			tempMap[dataName+fmt.Sprint(index)] = item.([]string)
 
 		/* Marshalling problem occurs, So the follwing is commented */
+		/* json: unsupported type: complex64 */
+		/* json: unsupported type: complex128 */
 
-		// case complex64:
-		// 	tempMap[dataName+fmt.Sprint(index)] = item.(complex64)
-		// case complex128:
-		// 	tempMap[dataName+fmt.Sprint(index)] = item.(complex128)
-		// case []complex64:
-		// 	tempMap[dataName+fmt.Sprint(index)] = item.([]complex64)
-		// case []complex128:
-		// 	tempMap[dataName+fmt.Sprint(index)] = item.([]complex128)
-
+		/*
+			case complex64:
+				tempMap[dataName+fmt.Sprint(index)] = item.(complex64)
+			case complex128:
+				tempMap[dataName+fmt.Sprint(index)] = item.(complex128)
+			case []complex64:
+				tempMap[dataName+fmt.Sprint(index)] = item.([]complex64)
+			case []complex128:
+				tempMap[dataName+fmt.Sprint(index)] = item.([]complex128)
+		*/
 		default:
 			fmt.Println("Got ", t)
 			panic("An illegal data value")

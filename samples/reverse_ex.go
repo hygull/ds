@@ -1,3 +1,11 @@
+/*
+	{
+		"date_of_creation" => "25 Dec 2016, Sunday",
+		"aim_of_program"   => "To use Reverse() of ds package",
+		"coded_by"         => "hygull",
+		"Go_version"	   => "1.7.1",
+	}
+*/
 package main
 
 import "fmt"

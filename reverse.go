@@ -4,8 +4,10 @@
 */
 package ds
 
+import "fmt"
+
 //A function that that reverses the order of elements in int/float/string slice & also reverses the string
-func Reverse(data interface{}) {
+func Reverse(data interface{}) error {
 	switch t := data.(type) {
 	case []int:
 		a := data.([]int)
@@ -32,6 +34,31 @@ func Reverse(data interface{}) {
 		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
 			a[i], a[j] = a[j], a[i]
 		}
+	case []uint:
+		a := data.([]uint)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
+	case []uint8:
+		a := data.([]uint8)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
+	case []uint16:
+		a := data.([]uint16)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
+	case []uint32:
+		a := data.([]uint32)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
+	case []uintptr:
+		a := data.([]uintptr)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
 	case []float32:
 		a := data.([]float32)
 		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
@@ -42,16 +69,35 @@ func Reverse(data interface{}) {
 		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
 			a[i], a[j] = a[j], a[i]
 		}
-	case []byte:
-		for i, j := 0, len(t)-1; i < j; i, j = i+1, j-1 {
-			t[i], t[j] = t[j], t[i]
-		}
+
 	case []string:
 		a := data.([]string)
 		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
 			a[i], a[j] = a[j], a[i]
 		}
+	case []bool:
+		a := data.([]bool)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
+	case []complex64:
+		a := data.([]complex64)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
+	case []complex128:
+		a := data.([]complex128)
+		for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+			a[i], a[j] = a[j], a[i]
+		}
 	default:
-		panic("Improper argument in call to Reverse()")
+		return fmt.Errorf("%v %v %v", "Got ", t, " an invalid slice/string to reverse")
 	}
+	return nil
 }
+
+/* a := data.([]bool)  ==>  a := data.([]string).......It will show the like below
+--- FAIL: TestReverse (0.00s)
+panic: interface conversion: interface is []bool, not []string [recovered]
+	panic: interface conversion: interface is []bool, not []string
+*/
