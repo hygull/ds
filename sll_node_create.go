@@ -10,7 +10,6 @@ type Node struct {
 
 //A function that creates a node for singly lint based on the information provided (as list of data)
 func CreateNode(compulsoryData interface{}, data ...interface{}) *Node {
-	fmt.Print(compulsoryData, data)
 	tempMap := make(map[string]interface{})
 	node := Node{}
 	dataName := "Data"
@@ -70,10 +69,8 @@ func CreateNode(compulsoryData interface{}, data ...interface{}) *Node {
 		case float32:
 			tempMap[dataName+fmt.Sprint(index)] = item.(float32)
 		case []float32:
-			fmt.Print("gh")
 			tempMap[dataName+fmt.Sprint(index)] = item.([]float32)
 		case float64:
-			fmt.Print("gh64")
 			tempMap[dataName+fmt.Sprint(index)] = item.(float64)
 		case []float64:
 			tempMap[dataName+fmt.Sprint(index)] = item.([]float64)

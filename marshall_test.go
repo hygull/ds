@@ -1,3 +1,11 @@
+/*
+	{
+		"date_of_creation" => "26 Dec 2016, Monday(morning)",
+		"aim_of_program"   => "To test marshalling the nodes of a singly linked list",
+		"coded_by"         => "Rishikesh Agrawani",
+		"Go_version"	   => "1.7.1",
+	}
+*/
 package ds
 
 import "testing"
