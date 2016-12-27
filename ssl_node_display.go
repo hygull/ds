@@ -54,7 +54,6 @@ func ShowNodes(__startNodePtr *Node) error {
 //There is no need to return error type, if list is empty then return a empty slice of maps
 func GetNodesRecords(__startNodePtr *Node) []map[string]interface{} {
 	nodeRecords := []map[string]interface{}{}
-	fmt.Println()
 
 	for __startNodePtr != nil {
 		nodeRecords = append(nodeRecords, __startNodePtr.Record)

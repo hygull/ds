@@ -10,32 +10,33 @@ import (
 )
 
 func TestInsertNodeAtBeginningAndEnd(t *testing.T) {
-	fmt.Println("\n********* Testing (Inserting nodes at beginning & end of the linked list) **********\n")
+	var start *Node //start woill point to 1st node of singly linked list
+	fmt.Println("\n********* Testing (Inserting & deleting nodes at beginning & end of the linked list) **********\n")
 	node := CreateNode("Hygull", 24)
-	start := InsertSllNodeAtBeginning(node) //We can also use the global START variable
+	start = InsertSllNodeAtBeginning(start, node) //We can also use the global START variable
 	/*
 				+---------------+----+
 		start-->| {"Hygull",24} | nil|
 				+--------------------+
 	*/
 	node2 := CreateNode("Hemkesh", 22)
-	start = InsertSllNodeAtBeginning(node2)
+	start = InsertSllNodeAtBeginning(start, node2)
 	/*
-					+---------------+----+    +----------------+----+
-		   start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} | nil|
-					+---------------+----+    +----------------+----+
+				 +---------------+----+    +----------------+----+
+		start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} | nil|
+				 +---------------+----+    +----------------+----+
 	*/
 	node3 := CreateNode("Darshan", 23)
-	start = InsertSllNodeAtEnd(node3)
+	start = InsertSllNodeAtEnd(start, node3)
 	/*
-					+---------------+----+    +----------------+----+     +----------------+----+
-		   start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} |  =======>| {"Darshan",23} | nil|
-					+---------------+----+    +----------------+----+     +----------------+----+
+				 +---------------+----+    +----------------+----+     +----------------+----+
+		start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} |  =======>| {"Darshan",23} | nil|
+				 +---------------+----+    +----------------+----+     +----------------+----+
 	*/
 	ShowNodes(start)
 	fmt.Println()
 
-	ShowNodesHierarchy(START) //using global START variable
+	ShowNodesHierarchy(start)
 	fmt.Println()
 
 	recordsList := GetNodesRecords(start)
@@ -52,5 +53,5 @@ func TestInsertNodeAtBeginningAndEnd(t *testing.T) {
 	if err != nil {
 		fmt.Println(err) //singly linked list is empty
 	}
-
+	fmt.Println("DONE...")
 }

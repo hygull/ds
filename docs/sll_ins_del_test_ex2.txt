@@ -1,0 +1,67 @@
+singly linked list is empty
+
+********* Testing (Inserting nodes at beginning & end of the linked list) **********
+
+
+--------------------- Record at Node1 -----------------------------
+{
+	"Data0": 22,
+	"Data1": "Hemkesh"
+}
+
+--------------------- Record at Node2 -----------------------------
+{
+	"Data0": 24,
+	"Data1": "Hygull"
+}
+
+--------------------- Record at Node3 -----------------------------
+{
+	"Data0": 23,
+	"Data1": "Darshan"
+}
+
+----------------------------END------------------------------------
+
+
+{
+	"Record": {
+		"Data0": 22,
+		"Data1": "Hemkesh"
+	},
+	"Next": {
+		"Record": {
+			"Data0": 24,
+			"Data1": "Hygull"
+		},
+		"Next": {
+			"Record": {
+				"Data0": 23,
+				"Data1": "Darshan"
+			},
+			"Next": null
+		}
+	}
+}
+
+
+[
+	{
+		"Data0": 22,
+		"Data1": "Hemkesh"
+	},
+	{
+		"Data0": 24,
+		"Data1": "Hygull"
+	},
+	{
+		"Data0": 23,
+		"Data1": "Darshan"
+	}
+]
+After deleting 1 node from beginning
+[map[Data0:24 Data1:Hygull] map[Data1:Darshan Data0:23]]
+After adding 1 node at end
+[map[Data0:24 Data1:Hygull] map[Data0:23 Data1:Darshan] map[Data0:24 Data1:Surendra]]
+After deleting 1 node from end
+[map[Data0:24 Data1:Hygull] map[Data0:23 Data1:Darshan]]
