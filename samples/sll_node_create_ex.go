@@ -12,7 +12,7 @@ import "fmt"
 import "ds"
 import "encoding/json"
 
-type G struct {
+type Person struct {
 	Name string
 	Age  int
 }
@@ -28,12 +28,12 @@ func main() {
 	fmt.Println("data: ", string(data))
 
 	node.Next = ds.CreateNode("Hemkesh", 22)
-	fmt.Print(node.Next)
+	fmt.Print(*(node.Next))
 
 	/* Extra */
-	str := ds.Unmarshall(G{"Hemkesh", 22})
+	str, _ := ds.Marshall(Person{"Hemkesh", 22})
 
 	fmt.Print("\n", str)
 
-	fmt.Println(ds.Unmarshall(1))
+	fmt.Println(ds.Marshall(1))
 }

@@ -92,6 +92,7 @@ func CreateNode(compulsoryData interface{}, data ...interface{}) *Node {
 				tempMap[dataName+fmt.Sprint(index)] = item.([]complex64)
 			case []complex128:
 				tempMap[dataName+fmt.Sprint(index)] = item.([]complex128)
+
 		*/
 		default:
 			fmt.Println("Got ", t)

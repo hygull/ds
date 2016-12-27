@@ -2,7 +2,7 @@
 	{
 		"date_of_creation" => "27 Dec 2016, Tuesday(morning)",
 		"aim_of_program"   => "Testing nodes display functions of singly linked list",
-		"coded_by"         => "Rishikesh Agrawani",
+		"coded_by"         => "hygull",
 		"Go_version"	   => "1.7.1",
 	}
 */
@@ -46,7 +46,7 @@ func TestGetNodesRecords(t *testing.T) {
 
 	var start *Node //nil
 	records := GetNodesRecords(start)
-	if len(records) == 0 {
+	if len(records) == 0 { //If linked list is empty
 		fmt.Println("Singly linked list is empty")
 	}
 }

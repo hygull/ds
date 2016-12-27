@@ -1,0 +1,62 @@
+
+********* Testing (Inserting nodes at beginning & end of the linked list) **********
+
+
+--------------------- Record at Node1 -----------------------------
+{
+	"Data0": 22,
+	"Data1": "Hemkesh"
+}
+
+--------------------- Record at Node2 -----------------------------
+{
+	"Data0": 24,
+	"Data1": "Hygull"
+}
+
+--------------------- Record at Node3 -----------------------------
+{
+	"Data0": 23,
+	"Data1": "Darshan"
+}
+
+----------------------------END------------------------------------
+
+
+{
+	"Record": {
+		"Data0": 22,
+		"Data1": "Hemkesh"
+	},
+	"Next": {
+		"Record": {
+			"Data0": 24,
+			"Data1": "Hygull"
+		},
+		"Next": {
+			"Record": {
+				"Data0": 23,
+				"Data1": "Darshan"
+			},
+			"Next": null
+		}
+	}
+}
+
+
+
+[
+	{
+		"Data0": 22,
+		"Data1": "Hemkesh"
+	},
+	{
+		"Data0": 24,
+		"Data1": "Hygull"
+	},
+	{
+		"Data0": 23,
+		"Data1": "Darshan"
+	}
+]
+singly linked list is empty

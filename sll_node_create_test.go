@@ -2,7 +2,7 @@
 	{
 		"date_of_creation" => "26 Dec 2016, Monday(morning)",
 		"aim_of_program"   => "To test node creation function of singly linked list",
-		"coded_by"         => "Rishikesh Agrawani",
+		"coded_by"         => "hygull",
 		"Go_version"	   => "1.7.1",
 	}
 */

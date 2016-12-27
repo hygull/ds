@@ -1,3 +1,11 @@
+/*
+	{
+		"date_of_creation" => "27 Dec 2016, Tuesday(morning)",
+		"aim_of_program"   => "Displaying nodes information",
+		"coded_by"         => "hygull",
+		"Go_version"	   => "1.7.1",
+	}
+*/
 package ds
 
 import "errors"
@@ -38,6 +46,7 @@ func ShowNodes(__startNodePtr *Node) error {
 		__startNodePtr = __startNodePtr.Next
 		i++
 	}
+	fmt.Println("----------------------------END------------------------------------")
 	return nil
 }
 
