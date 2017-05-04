@@ -15,6 +15,11 @@ type Int8Slice []int8
 type Int16Slice []int16
 type Int32Slice []int32
 type Int64Slice []int64
+type UintSlice []uint
+type Uint8Slice []uint8
+type Uint16Slice []uint16
+type Uint32Slice []uint32
+type Uint64Slice []uint64
 
 //A function that sorts a slice of float32
 func (f32Slice Float32Slice) Sort() {

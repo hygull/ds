@@ -96,7 +96,7 @@ func Reverse(data interface{}) error {
 	return nil
 }
 
-/* a := data.([]bool)  ==>  a := data.([]string).......It will show the like below
+/* a := data.([]bool)  ==>  a := data.([]string).......It will show the error like below
 --- FAIL: TestReverse (0.00s)
 panic: interface conversion: interface is []bool, not []string [recovered]
 	panic: interface conversion: interface is []bool, not []string

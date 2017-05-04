@@ -16,21 +16,21 @@ func TestInsertNodeAtBeginningAndEnd(t *testing.T) {
 	start = InsertSllNodeAtBeginning(start, node) //We can also use the global START variable
 	/*
 				+---------------+----+
-		start-->| {"Hygull",24} | nil|
+		        start-->| {"Hygull",24} | nil|
 				+--------------------+
 	*/
 	node2 := CreateNode("Hemkesh", 22)
 	start = InsertSllNodeAtBeginning(start, node2)
 	/*
 				 +---------------+----+    +----------------+----+
-		start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} | nil|
+		        start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} | nil|
 				 +---------------+----+    +----------------+----+
 	*/
 	node3 := CreateNode("Darshan", 23)
 	start = InsertSllNodeAtEnd(start, node3)
 	/*
 				 +---------------+----+    +----------------+----+     +----------------+----+
-		start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} |  =======>| {"Darshan",23} | nil|
+		        start===>| {"Hemkesh",22}|  ======>| {"Hygull", 24} |  =======>| {"Darshan",23} | nil|
 				 +---------------+----+    +----------------+----+     +----------------+----+
 	*/
 	ShowNodes(start)
